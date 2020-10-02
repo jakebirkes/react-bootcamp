@@ -64,3 +64,31 @@ function App() {
  );
 }
 ```
+
+## Higher Order Components
+
+A function that takes a component as its first argument. It returns a newly wrapped component wraps that was given, which provides extra capabilities.
+
+```js
+import React from 'react';
+
+export const withPointlessHOC = Component => (
+  props => (
+    <Component {...props} />
+  )
+);
+```
+
+```js
+import { withPointlessHOC } from './hoc-practice/withPointlessHOC';
+
+const App = () => (
+  <>
+    <h1>
+    <span aria-label="emoji" role="img">👋</span>
+    </h1>
+  </>
+);
+
+export default withPointlessHOC(App);
+```
