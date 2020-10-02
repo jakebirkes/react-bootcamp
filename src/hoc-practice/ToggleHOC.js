@@ -4,13 +4,13 @@ import { withPointlessHOC, withExtraPropAdded } from './HOC';
 
 class ToggleHOC extends Component {
 	state = {
-		show: true,
+		hide: true,
 	};
 
 	toggleShow = () => {
 		this.setState(prevState => {
 			return {
-				show: !prevState.show,
+				hide: !prevState.hide,
 			};
 		});
 	};
@@ -19,12 +19,12 @@ class ToggleHOC extends Component {
 		const PointlessHOC = withPointlessHOC(TestHOC);
 		const ExtraPropAdded = withExtraPropAdded(TestHOC, 12); // adding favorite number here
 
-		const ComponentToggled = this.state.show ? PointlessHOC : ExtraPropAdded;
+		const ComponentToggled = this.state.hide ? PointlessHOC : ExtraPropAdded;
 
 		return (
 			<>
 				<button onClick={this.toggleShow}>
-					{this.state.show ? 'Hide' : 'Show'} ExtraPropAdded{' '}
+					{this.state.hide ? 'Show' : 'Hide'} ExtraPropAdded
 				</button>
 				{ComponentToggled()}
 			</>
