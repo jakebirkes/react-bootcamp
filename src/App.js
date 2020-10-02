@@ -1,25 +1,15 @@
 import React from 'react';
+import ToggleHOC from './hoc-practice/ToggleHOC';
 // import CTA from './children-practice/CTA';
 // import CalloutWrapper from './children-practice/CalloutWrapper';
 // import CalloutInfo from './children-practice/CalloutInfo';
 // import CalloutImg from './children-practice/CalloutImg';
 // import CalloutEmail from './children-practice/CalloutEmail';
-import { withPointlessHOC } from './hoc-practice/withPointlessHOC';
-import { withExtraPropAdded } from './hoc-practice/withExtraPropAdded';
 
 const App = props => (
 	<>
-		<h1>
-			<span aria-label="emoji" role="img">
-				👋
-			</span>
-		</h1>
-		<h2>
-			<span aria-label="emoji" role="img">
-				{props.extraProp || '🤪'}
-			</span>
-		</h2>
-		<div>{props.children || <p>Using a pointless HOC</p>}</div>
+		<ToggleHOC />
+
 		{/* <CTA>
 			<h1>This is an important CTA</h1>
 			<button>Click me now or you'll miss out!</button>
@@ -49,8 +39,7 @@ const App = props => (
 		</CalloutWrapper> */}
 	</>
 );
-
 // const PointlessHOC = withPointlessHOC(App);
-const ExtraPropAdded = withExtraPropAdded(App, 12); // adding favorite number here
+// const ExtraPropAdded = App; // adding favorite number here
 
-export default ExtraPropAdded;
+export default App;
