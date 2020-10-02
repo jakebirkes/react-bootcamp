@@ -19,6 +19,7 @@ const App = props => (
 				{props.extraProp || '🤪'}
 			</span>
 		</h2>
+		<div>{props.children || <p>Using a pointless HOC</p>}</div>
 		{/* <CTA>
 			<h1>This is an important CTA</h1>
 			<button>Click me now or you'll miss out!</button>
