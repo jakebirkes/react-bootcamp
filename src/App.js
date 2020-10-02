@@ -51,6 +51,6 @@ const App = props => (
 );
 
 // const PointlessHOC = withPointlessHOC(App);
-const ExtraPropAdded = withExtraPropAdded(App);
+const ExtraPropAdded = withExtraPropAdded(App, 12); // adding favorite number here
 
 export default ExtraPropAdded;
