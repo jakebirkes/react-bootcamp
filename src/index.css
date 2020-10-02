@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.border {
+  border: 5px solid blue;
+}
+
+.callout-wrapper {
+  padding: 15px;
+}
+
+.callout-wrapper > div {
+  margin: 15px 0;
+}
+
+.callout-email {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #eee;
+  padding: 0 15px 15px;
+}
