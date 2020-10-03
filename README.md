@@ -69,12 +69,16 @@ function App() {
 
 A function that takes a component as its first argument. It returns a newly wrapped component wraps that was given, which provides extra capabilities.
 
+From my experience, it's a way to intercept an modify a component before it renders without changing it directly.
+
 ```js
 import React from 'react';
 
 export const withPointlessHOC = Component => (
   props => (
-    <Component {...props} />
+    <Component {...props}>
+      <span aria-label="emoji" role="img">😉</span>
+    </Component>
   )
 );
 ```
@@ -83,12 +87,42 @@ export const withPointlessHOC = Component => (
 import { withPointlessHOC } from './hoc-practice/withPointlessHOC';
 
 const App = () => (
-  <>
-    <h1>
+  <h1>
     <span aria-label="emoji" role="img">👋</span>
-    </h1>
-  </>
+    {props.children}
+  </h1>
 );
 
 export default withPointlessHOC(App);
+```
+
+```html
+<h1>
+  <span aria-label="emoji" role="img">👋</span>
+  <span aria-label="emoji" role="img">😉</span>
+</h1>
+```
+
+## Render Props
+
+```js
+export const Example props => (
+  <div>
+    {props.render(1)}
+  </div>
+);
+```
+
+```js
+const App = () => (
+  <>
+    <Example render={ num => <h1>{num > 0 ? 'Hello' : 'Goodbye'}</h1> } />
+  </>
+);
+```
+
+```html
+<div>
+  <h1>Hello</h1>
+</div>
 ```

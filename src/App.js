@@ -3,6 +3,7 @@ import { useFetch } from './hooks/useFetch';
 import { withLoader } from './hoc-practice/HOC';
 import ToggleHOC from './hoc-practice/ToggleHOC';
 import ListedRepos from './hoc-practice/ListedRepos';
+import TestRenderProps from './render-props-practice/TestRenderProps';
 const LoadedRepos = withLoader(ListedRepos);
 // import CTA from './children-practice/CTA';
 // import CalloutWrapper from './children-practice/CalloutWrapper';
@@ -16,6 +17,7 @@ const App = props => {
 		<>
 			<ToggleHOC />
 			<LoadedRepos isLoading={isLoading} data={response} />
+			<TestRenderProps />
 			{/* <CTA>
 			<h1>This is an important CTA</h1>
 			<button>Click me now or you'll miss out!</button>
