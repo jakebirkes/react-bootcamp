@@ -42,7 +42,7 @@ class ToggleHOC extends Component {
 						padding: '7.5px',
 						fontWeight: '600',
 					}}>
-					{this.state.show ? 'Hide' : 'Show'} extra props added
+					{this.state.show ? 'Hide' : 'Show'} extra props added using 'HOC'
 				</button>
 				{ComponentToggled()}
 				<button onClick={this.toggleLiked} style={{ background: 'none', border: 'none' }}>
