@@ -1,68 +1,132 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Intro Notes
 
-## Available Scripts
+## State
 
-In the project directory, you can run:
+- don't change the state directly
+- always wrap object in `()` for implied return
+- don's use `--` or `++`, use `- 1` or `+ 1`
 
-### `yarn start`
+```jsx
+increment = () => {
+    this.setState(prevState => ({count: prevState.count + 1}))
+}
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+decrement = () => {
+    this.setState(prevState => {
+        return {
+            count: prevState.count - 1
+        }
+    })
+}
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Fragment
 
-### `yarn test`
+To avoid components rendered in unnecessary `div` elements
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```jsx
+import React, {Fragment} from "react";
+import Child from "./Child";
 
-### `yarn build`
+function App() {
+    return (
+        <Fragment>
+            <Child />
+        </Fragment>
+    )
+}
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```jsx
+import React from "react";
+import Child from "./Child";
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+function App() {
+    return (
+        <React.Fragment>
+            <Child />
+        </React.Fragment>
+    )
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```jsx
+import React from "react";
+import Child from "./Child";
 
-### `yarn eject`
+function App() {
+    return (
+        <>
+            <Child />
+        </>
+    )
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Default Props
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If prop is missing.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```jsx
+Card.defaultProps = {
+  cardColor: 'blue'
+};
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+In a class component
 
-## Learn More
+```jsx
+class Card extends React.Component {
+    static defaultProps = {
+        cardColor: "blue",
+        height: 100,
+        width: 100
+    }
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Prop Types
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[PropTypes Documentation](https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes)
 
-### Code Splitting
+A way to check types for components
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+`yarn add prop-types`
 
-### Analyzing the Bundle Size
+```jsx
+import PropTypes from "prop-types"
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+...
 
-### Making a Progressive Web App
+// after component with default
+Card.propTypes = {
+    cardColor: PropTypes.string
+}
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Card.defaultProps = {
+    cardColor: "blue",
+    height: 100,
+    width: 100
+}
+```
 
-### Advanced Configuration
+Make a prop a requirement
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```jsx
+Card.propTypes = {
+    cardColor: PropTypes.string.isRequired
+}
 
-### Deployment
+// remove default cardColor
+Card.defaultProps = {
+    height: 100,
+    width: 100
+}
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Restrict values
 
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```jsx
+Card.propTypes = {
+    cardColor: PropTypes.string.oneOf(['blue', 'red']).isRequired
+}
+```
