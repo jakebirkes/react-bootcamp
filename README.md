@@ -28,4 +28,12 @@ These sections have been divided into separate repos and their *README's* are no
 
 ## Performance
 
+- React.Components using `shouldComponentUpdate`
+
+- 'PureComponents' for React to do checking for us automatically
+
+- React.memo for functional components
+
+## React Context
+
 Currently Here 🙃
