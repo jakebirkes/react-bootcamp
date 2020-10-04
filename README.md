@@ -4,9 +4,9 @@
 
 [The React Bootcamp](https://scrimba.com/learn/react) is a self-paced study with Bob Ziroll as the instructor through [Scrimba](https://scrimba.com)
 
-These sections have been divided into separate repos and their *README's* are notes taken during the course.
+These sections have been divided into separate branches and their *README's* are notes taken during the course.
 
-## Intro
+## [Intro](https://github.com/jakebirkes/react-bootcamp/tree/intro)
 
 - React Fragment
 
@@ -14,7 +14,7 @@ These sections have been divided into separate repos and their *README's* are no
 
 - Prop Types
 
-## Reusability
+## [Reusability](https://github.com/jakebirkes/react-bootcamp/tree/reusability)
 
 - React Children
 
@@ -26,7 +26,7 @@ These sections have been divided into separate repos and their *README's* are no
 
 - Render Props
 
-## Performance
+## [Performance](https://github.com/jakebirkes/react-bootcamp/tree/performance)
 
 - React.Components using `shouldComponentUpdate`
 
@@ -34,7 +34,7 @@ These sections have been divided into separate repos and their *README's* are no
 
 - React.memo for functional components
 
-## React Context
+## [React Context](https://github.com/jakebirkes/react-bootcamp/tree/react-context)
 
 - Avoiding Prop Drilling by using Context
 
@@ -42,14 +42,14 @@ These sections have been divided into separate repos and their *README's* are no
 
 - `React.createContext`
 
-- Hook: `React.useContext`
+- *Bonus!* Hook: `React.useContext`
 
-- Hook: `React.useReducer`
+- *Bonus!* Hook: `React.useReducer`
 
 - Implementation of Context:
   - Using Function Components
   - Using Class Components
 
-## Hooks
+## [React Hooks](https://github.com/jakebirkes/react-bootcamp/tree/react-hooks)
 
 Currently Here 🙃
