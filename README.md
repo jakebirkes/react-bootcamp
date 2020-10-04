@@ -38,14 +38,18 @@ These sections have been divided into separate repos and their *README's* are no
 
 - Avoiding Prop Drilling by using Context
 
+- Providers & Consumers
+
 - `React.createContext`
 
-- `React.useContext`
+- Hook: `React.useContext`
 
-- `React.useReducer`
+- Hook: `React.useReducer`
 
 - Implementation of Context:
   - Using Function Components
   - Using Class Components
+
+## Hooks
 
 Currently Here 🙃
