@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +9,29 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 20px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  margin: 10px;
+}
+
+.dark-theme {
+  background-color: #333333;
+  color: whitesmoke;
+}
+
+.light-theme {
+  background-color: whitesmoke;
+  color: #333333;
 }
