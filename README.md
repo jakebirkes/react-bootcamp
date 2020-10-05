@@ -1,55 +1,50 @@
-# The React Bootcamp
+# React Hooks
 
->The best learning experience paired with a world-class instructor. This massive course aims to turn you into hireable React developer as fast as humanly possible.
+"Hook into" state and lifecycle methods of components without using class components. You're able to use function components across the board. They also improve the readability and organization of components. You're even allowed to create custom hooks! 🥳
 
-[The React Bootcamp](https://scrimba.com/learn/react) is a self-paced study with Bob Ziroll as the instructor through [Scrimba](https://scrimba.com)
+## 10 Built-in Hooks
 
-These sections have been divided into separate repos and their *README's* are notes taken during the course.
+### useState
 
-## Intro
+This requires array destructuring with a value and a function. Initially you can set a value or an object of values for the first in the destructured array. Here we have a boolean set to false at render. Then in the button's `onClick` up can call the function and write what it should do, which will be in context with `useState()`
 
-- React Fragment
+```js
+import React, { useState } from 'react';
 
-- Default Props
+const ExampleUseState = () => {
+ const [state, toggleState] = useState(false);
+ return (
+  <div className="hook-example">
+   <h2>
+    <code>useState()</code>
+   </h2>
+   <p>
+    State: <span>{state ? 'true' : 'false'}</span>
+   </p>
+   <button onClick={() => toggleState(prevState => (prevState = !state))}>
+    Toggle with <code>useState</code>
+   </button>
+  </div>
+ );
+};
 
-- Prop Types
+export default ExampleUseState;
+```
 
-## Reusability
+### useEffect
 
-- React Children
+### useContext
 
-- Higher Order Components
-  - *Bonus!* Use case for HOC: `withLoader` for fetching data using hooks:
-    - `useFetch` (custom hook)
-    - `useEffect`
-    - `useState`
+### useRef
 
-- Render Props
+### useReducer
 
-## Performance
+### useMemo
 
-- React.Components using `shouldComponentUpdate`
+### useCallback
 
-- 'PureComponents' for React to do checking for us automatically
+### useImperativeHandle
 
-- React.memo for functional components
+### useLayoutEffect
 
-## React Context
-
-- Avoiding Prop Drilling by using Context
-
-- Providers & Consumers
-
-- `React.createContext`
-
-- Hook: `React.useContext`
-
-- Hook: `React.useReducer`
-
-- Implementation of Context:
-  - Using Function Components
-  - Using Class Components
-
-## Hooks
-
-Currently Here 🙃
+### useDebugValue
