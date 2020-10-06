@@ -42,13 +42,13 @@ These sections have been divided into separate branches and their *README's* are
 
 - `React.createContext`
 
-- *Bonus!* Hook: `React.useContext`
-
-- *Bonus!* Hook: `React.useReducer`
-
 - Implementation of Context:
   - Using Function Components
   - Using Class Components
+
+- *Bonus!* 🎉 Example w/ Hooks:
+  - `React.useContext`
+  - `React.useReducer`
 
 ## [React Hooks](https://github.com/jakebirkes/react-bootcamp/tree/react-hooks)
 
