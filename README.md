@@ -19,12 +19,13 @@ These sections have been divided into separate branches and their *README's* are
 - React Children
 
 - Higher Order Components
-  - *Bonus!* Use case for HOC: `withLoader` for fetching data using hooks:
-    - `useFetch` (custom hook)
-    - `useEffect`
-    - `useState`
 
 - Render Props
+
+- *Bonus!* 🎉 Example HOC Use Case w/ Hooks: `withLoader`
+  - `useFetch` (custom)
+  - `useEffect`
+  - `useState`
 
 ## [Performance](https://github.com/jakebirkes/react-bootcamp/tree/performance)
 
@@ -47,8 +48,8 @@ These sections have been divided into separate branches and their *README's* are
   - Using Class Components
 
 - *Bonus!* 🎉 Example w/ Hooks:
-  - `React.useContext`
-  - `React.useReducer`
+  - `useContext`
+  - `useReducer`
 
 ## [React Hooks](https://github.com/jakebirkes/react-bootcamp/tree/react-hooks)
 
