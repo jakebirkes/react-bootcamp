@@ -58,4 +58,9 @@ These sections have been divided into separate branches and their *README's* are
   - Counter Example
   - Form Example
 
+- `useEffect()`
+  - Random Color Counter Example
+  - Interval Example
+  - *Project!* 🎉 Speed Typing Game
+  
 Currently Here 🙃
