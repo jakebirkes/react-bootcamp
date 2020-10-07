@@ -33,6 +33,32 @@ export default ExampleUseState;
 
 ### useEffect
 
+A hook that allows the ability to use 'sideEffects' - anything that reaches outside of a component:
+
+- Network requests
+
+- DOM Manipulation
+
+- Event Listeners
+
+- Timeouts & Intervals
+
+Uses a callback and a an array of what it should watch, such as state for example.
+
+```js
+useEffect(() => setColor(randomcolor()), [count]);
+
+useEffect(() => {
+  const counterInterval = setInterval(() => {
+    const counter = document.getElementById('counter');
+    counter.textContent = +counter.textContent + 1;
+  }, 1000);
+  return () => clearInterval(counterInterval); // cleanup interval
+}, []); // without state, will trigger at every render
+```
+
+Without a dependency, this by default will trigger at every render
+
 ### useContext
 
 ### useRef

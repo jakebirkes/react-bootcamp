@@ -74,6 +74,8 @@ const ExampleUseState = () => {
 				<button onClick={() => increment()}>
 					Increment with <code>useState</code>
 				</button>
+			</p>
+			<p>
 				<button onClick={() => decrement()}>
 					Decrement with <code>useState</code>
 				</button>
