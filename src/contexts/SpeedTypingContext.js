@@ -5,8 +5,8 @@ export const SpeedTypingContext = createContext();
 
 const initialState = {
 	start: false,
-	timeRemaining: null,
 	text: null,
+	count: null,
 };
 
 const SpeedTypingContextProvider = ({ children }) => {
@@ -18,13 +18,10 @@ const SpeedTypingContextProvider = ({ children }) => {
 
 	const storeText = payload => dispatch({ type: 'STORE_TEXT', payload });
 
-	const countDown = () => dispatch({ type: 'COUNT_DOWN' });
-
 	const contextValues = {
 		startGame,
 		endGame,
 		storeText,
-		countDown,
 		...state,
 	};
 	return (

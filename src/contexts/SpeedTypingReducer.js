@@ -4,12 +4,6 @@ export const SpeedTypingReducer = (state, action) => {
 			return {
 				...state,
 				start: !state.start,
-				timeRemaining: 60,
-			};
-		case 'COUNT_DOWN':
-			return {
-				...state,
-				timeRemaining: state.timeRemaining - 1,
 			};
 		case 'END_GAME':
 			return {
@@ -17,9 +11,14 @@ export const SpeedTypingReducer = (state, action) => {
 				start: !state.start,
 			};
 		case 'STORE_TEXT':
+			const numWords = action.payload
+				.trim()
+				.split(' ')
+				.filter(word => word !== '').length;
 			return {
 				...state,
 				text: action.payload,
+				count: numWords,
 			};
 		default:
 			console.error('SpeedTypingReducer: INVALID ACTION', action.type);
