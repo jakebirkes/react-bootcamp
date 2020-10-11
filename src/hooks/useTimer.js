@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 /**
- * Countdown Timer
+ * Timer ~ Count up or down
  * @param {boolean} bool to trigger timer
  * @param {function} fn to control the count outside of useEffect
  * @param {number} time the number that will count down or up

@@ -1,16 +1,15 @@
 import React, { createContext, useReducer } from 'react';
-import { SpeedTypingReducer } from './SpeedTypingReducer';
+import { TimerReducer } from './TimerReducer';
 
-export const SpeedTypingContext = createContext();
+export const TimerContext = createContext();
 
 const initialState = {
 	start: false,
-	text: null,
 	time: 60,
 };
 
-const SpeedTypingContextProvider = ({ children }) => {
-	const [state, dispatch] = useReducer(SpeedTypingReducer, initialState);
+const TimerContextProvider = ({ children }) => {
+	const [state, dispatch] = useReducer(TimerReducer, initialState);
 
 	const startGame = () => dispatch({ type: 'START_GAME' });
 
@@ -27,9 +26,7 @@ const SpeedTypingContextProvider = ({ children }) => {
 		keepTime,
 		...state,
 	};
-	return (
-		<SpeedTypingContext.Provider value={contextValues}>{children}</SpeedTypingContext.Provider>
-	);
+	return <TimerContext.Provider value={contextValues}>{children}</TimerContext.Provider>;
 };
 
-export default SpeedTypingContextProvider;
+export default TimerContextProvider;

@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import useTimer from '../../hooks/useTimer';
-import { SpeedTypingContext } from '../../contexts/SpeedTypingContext';
+import { TimerContext } from '../../contexts/TimerContext';
 
 const SpeedTypingTimer = () => {
-	const { start, keepTime, time } = useContext(SpeedTypingContext);
+	const { start, keepTime, time } = useContext(TimerContext);
 	useTimer(start, keepTime, time);
 
 	return (

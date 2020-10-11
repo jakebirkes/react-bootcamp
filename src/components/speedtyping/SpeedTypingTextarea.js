@@ -1,29 +1,18 @@
-import React, { useState, useContext } from 'react';
-import { SpeedTypingContext } from '../../contexts/SpeedTypingContext';
+import React, { useContext } from 'react';
+import { TimerContext } from '../../contexts/TimerContext';
+import { ScoreContext } from '../../contexts/ScoreContext';
 
 const SpeedTypingTextarea = () => {
-	const { start } = useContext(SpeedTypingContext);
-	const [wordCount, storeWordCount] = useState(0);
-	const [text, storeText] = useState('');
+	const { start } = useContext(TimerContext);
+	const { text, storeText } = useContext(ScoreContext);
 
 	const handleChange = e => {
-		const { value } = e.target;
-		if (value !== text) {
-			let str = value || '';
-			let num = str
-				.trim()
-				.split(' ')
-				.filter(word => word !== '').length;
-			storeText(value);
-			storeWordCount(num);
-		}
+		const { value } = e.target || '';
+		storeText(value);
 	};
 
 	return (
 		<>
-			<h3>
-				Count: <span id="wordCount">{wordCount || 0}</span> words
-			</h3>
 			<textarea disabled={!start} onChange={handleChange} value={text || ''} />
 		</>
 	);

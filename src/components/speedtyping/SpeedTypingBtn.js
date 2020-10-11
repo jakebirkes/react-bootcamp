@@ -1,11 +1,19 @@
 import React, { useContext } from 'react';
-import { SpeedTypingContext } from '../../contexts/SpeedTypingContext';
+import { TimerContext } from '../../contexts/TimerContext';
+import { ScoreContext } from '../../contexts/ScoreContext';
 
 const SpeedTypingBtn = () => {
-	const { startGame, start } = useContext(SpeedTypingContext);
+	const { startGame, start } = useContext(TimerContext);
+	const { storeCount } = useContext(ScoreContext);
+
+	const begin = () => {
+		storeCount();
+		startGame();
+	};
+
 	return (
 		<div>
-			<button disabled={start} onClick={() => startGame()}>
+			<button disabled={start} onClick={() => begin()}>
 				Start
 			</button>
 		</div>
