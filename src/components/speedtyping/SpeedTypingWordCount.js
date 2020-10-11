@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef } from 'react';
+import React, { useContext } from 'react';
 import { SpeedTypingContext } from '../../contexts/SpeedTypingContext';
 
 const SpeedTypingWordCount = () => {
