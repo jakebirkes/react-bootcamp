@@ -62,5 +62,9 @@ These sections have been divided into separate branches and their *README's* are
   - Random Color Counter Example
   - Interval Example
   - *Project!* 🎉 Speed Typing Game
+    - `useContext`
+    - `useReducer`
+    - `useEffect`
+    - `useTimer` (custom)
   
 Currently Here 🙃
