@@ -13,7 +13,7 @@ code {
 }
 
 button, input {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   background-color: transparent;
   padding: 10px;
   border-radius: 5px;
@@ -27,12 +27,27 @@ button:hover {
 button:focus {
   outline:0;
 }
+
 textarea {
   width: calc(100vw - 60px);
   max-width: 500px;
   height: 500px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
   margin-bottom: 16px;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, 
+.dark p, .dark span, .dark strong, .dark label {
+  color: #eee;
+}      
+
+.dark button, .dark input, .dark textarea {
+  color: #fff;
+  background-color: #222;
+}
+
+button:disabled {
+  opacity: .5;
 }

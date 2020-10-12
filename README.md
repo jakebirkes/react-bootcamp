@@ -61,7 +61,38 @@ Without a dependency, this by default will trigger at every render
 
 ### useContext
 
+See `ExampleUseContext` for toggling theme. Other Examples also provided in '**contexts**' folder.
+
 ### useRef
+
+This keep values to persist during re-render. One example to refocus on an input after a click.
+
+```js
+...
+ const inputRef = useRef(null);
+ const handleChange = e => setNewTodoValue(e.target.value);
+
+ const addTodo = e => {
+  e.preventDefault();
+  setTodoList(prevTodosList => [...prevTodosList, newTodoValue]);
+  setNewTodoValue('');
+  inputRef.current.focus(); // will refocus to input after click
+ };
+
+ ...
+
+ return (
+  <div class="hook-example">
+   <h2>
+    <code>useRef()</code>
+   </h2>
+   <form>
+    <input ref={inputRef}
+
+    ...
+```
+
+export default SpeedTypingTextarea;
 
 ### useReducer
 
