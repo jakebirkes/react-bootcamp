@@ -13,16 +13,10 @@ const TimerContextProvider = ({ children }) => {
 
 	const startGame = () => dispatch({ type: 'START_GAME' });
 
-	const endGame = () => dispatch({ type: 'START_GAME' });
-
-	const storeText = payload => dispatch({ type: 'STORE_TEXT', payload });
-
 	const keepTime = payload => dispatch({ type: 'KEEP_TIME', payload });
 
 	const contextValues = {
 		startGame,
-		endGame,
-		storeText,
 		keepTime,
 		...state,
 	};
