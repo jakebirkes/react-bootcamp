@@ -62,10 +62,17 @@ These sections have been divided into separate branches and their *README's* are
   - Random Color Counter Example
   - Interval Example
   
+- `useContext()` & `useReducer`
+  - Timer
+  - ScoreKeeper
+  - Theme
+
 - *Project!* 🎉 Speed Typing Game
   - `useContext`
   - `useReducer`
   - `useEffect`
   - `useTimer` (custom)
   
+## React Router
+
 Currently Here 🙃
