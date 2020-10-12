@@ -91,5 +91,3 @@ This keep values to persist during re-render. One example to refocus on an input
 
     ...
 ```
-
-export default SpeedTypingTextarea;
