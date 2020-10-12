@@ -73,6 +73,6 @@ These sections have been divided into separate branches and their *README's* are
   - `useEffect`
   - `useTimer` (custom)
   
-## React Router
+## [React Router](https://github.com/jakebirkes/react-bootcamp/tree/react-router)
 
 Currently Here 🙃
