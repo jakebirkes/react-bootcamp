@@ -12,7 +12,9 @@ For Single-Page Applications.
 
 ## Primary Components
 
-- Routers: `<BrowserRouter>` & `<HashRouter>`
+- Routers:
+  - `<BrowserRouter>`
+  - `<HashRouter>`
 
 ### BrowserRouter
 
@@ -32,8 +34,14 @@ ReactDOM.render(
 );
 ```
 
-- Route Matchers `<Route>` & `<Switch>`
-- Navigation ("route changers"): `<Link>`, `<NavLink>`, & `<Redirect>`
+- Route Matchers
+  - `<Route>` points to component(s)
+  - `<Switch>` like a switch/case
+
+- Navigation ("route changers"):
+  - `<Link>`
+  - `<NavLink>`
+  - `<Redirect>`
 
 ## Hooks
 
