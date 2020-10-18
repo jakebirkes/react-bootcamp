@@ -38,6 +38,17 @@ ReactDOM.render(
   - `<Route>` points to component(s)
   - `<Switch>` like a switch/case
 
+```js
+<Switch>
+  {/* Different ways of using Route components */}
+  <Route exact path="/" render={() => <Home />} />
+  <Route path="/about" component={About} />
+  <Route path="/contact">
+    <Contact email="wantulok.jake@gmail.com" />
+  </Route>
+</Switch>
+```
+
 - Navigation ("route changers"):
   - `<Link>`
   - `<NavLink>`

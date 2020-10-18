@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header {
+  background-color: whitesmoke;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  padding-left: 10px;
+}
+
+header ul li {
+  margin-right: 25px;
+  list-style: none;
+}
+
+header li a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+header li a:visited {
+  color: blue;
+}
