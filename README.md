@@ -75,4 +75,9 @@ These sections have been divided into separate branches and their *README's* are
   
 ## [React Router](https://github.com/jakebirkes/react-bootcamp/tree/react-router)
 
+- `<BrowserRouter>`
+- `<Route>`
+- `<Switch>`
+- `<Link>`
+
 Currently Here 🙃
