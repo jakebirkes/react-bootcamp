@@ -79,5 +79,6 @@ These sections have been divided into separate branches and their *README's* are
 - `<Route>`
 - `<Switch>`
 - `<Link>`
+- `useParams()`
 
 Currently Here 🙃
